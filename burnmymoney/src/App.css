@@ -13,16 +13,22 @@ button {
   color: #fff;
   font-size: 16px;
   letter-spacing: 1px;
-  background: #bb6e3b;
+  background: #cf6117;
   cursor: pointer;
+}
+
+button:hover {
+  background: #e46217;
 }
 
 .login {
   width: 100%;
   min-height: 100vh;
   padding: 0 20px;
-  background: #e9e9e9;
   display: flex;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/src/img/background.jpeg');
+  background-position:center top;
+  
 }
 
 .login .loginContainer {
@@ -36,9 +42,9 @@ button {
   justify-content: center;
   background: radial-gradient(
     ellipse at left bottom,
-    rgb(82, 60, 40) 0%,
-    rgba(110, 61, 21, 0.9) 59%,
-    rgba(104, 22, 22, 0.9) 100%
+    rgb(161, 121, 46) 0%,
+    rgba(170, 91, 26, 0.9) 59%,
+    rgba(153, 28, 28, 0.9) 100%
   );
   box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
 }
@@ -83,11 +89,11 @@ button {
 }
 
 .login .loginContainer .btnContainer p span:hover {
-  color: rgb(230, 112, 34);
+  color: #fb6907;
 }
 
 .login .loginContainer .errorMsg {
-  color: rgb(230, 112, 34);
+  color: rgb(255, 217, 0);
   font-size: 16px;
 }
 
@@ -118,6 +124,10 @@ button {
 .hero nav button {
   width: 86px;
   padding: 8px 0;
-  background: #75431a;
+  background: #cf6117;
+}
+
+.hero nav button:hover {
+  background: #e46217;
 }
 
