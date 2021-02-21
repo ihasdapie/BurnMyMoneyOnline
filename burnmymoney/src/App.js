@@ -47,6 +47,11 @@ const App = () => {
 
 
 
+  const handleKeyPress = e => {
+    if (e.key === 'Enter') {
+      handleLogin();
+    }
+  }
  
   const clearInputs = () => {
     setEmail('');
@@ -59,6 +64,7 @@ const App = () => {
   }
 
   const handleLogin = () => {
+    console.log("Logging in");
     clearErrors();
     fire
       .auth()
@@ -124,7 +130,7 @@ const App = () => {
         />
       ) : (
         <Login 
-          email={email + "@gmail.com"}
+          email={email}
           setEmail={setEmail}
           password={password}
           setPassword={setPassword}
@@ -134,6 +140,7 @@ const App = () => {
           setHasAccount={setHasAccount}
           emailError={emailError}
           passwordError={passwordError}
+          handleKeyPress={handleKeyPress}
         />
       )}
     </div>

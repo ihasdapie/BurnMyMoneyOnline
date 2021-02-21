@@ -1,9 +1,21 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import logo from './img/logo.png';
 
 const Login = (props) => {
     
-    const { email, setEmail, password, setPassword, handleLogin, handleSignup, hasAccount, setHasAccount, emailError, passwordError } = props;
+    const { 
+        email, 
+        setEmail, 
+        password, 
+        setPassword, 
+        handleLogin, 
+        handleSignup, 
+        hasAccount, 
+        setHasAccount, 
+        emailError, 
+        passwordError,
+        handleKeyPress
+    } = props;
 
     return(
         <section className="login">
@@ -24,6 +36,7 @@ const Login = (props) => {
                     required
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    onKeyPress={handleKeyPress}
                 />
                 <p className="errorMsg">{passwordError}</p>
                 <div className="btnContainer">
