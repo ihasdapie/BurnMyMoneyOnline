@@ -99,6 +99,11 @@ const App = () => {
     alert("call handle buy")
   }
 
+  const handleKeyPress = e => {
+    if (e.key === 'Enter') {
+      handleLogin();
+    }
+  }
  
   const clearInputs = () => {
     setEmail('');
@@ -111,6 +116,7 @@ const App = () => {
   }
 
   const handleLogin = () => {
+    console.log("Logging in");
     clearErrors();
     fire
       .auth()
@@ -186,6 +192,7 @@ const App = () => {
           setHasAccount={setHasAccount}
           emailError={emailError}
           passwordError={passwordError}
+          handleKeyPress={handleKeyPress}
         />
       )}
     </div>
