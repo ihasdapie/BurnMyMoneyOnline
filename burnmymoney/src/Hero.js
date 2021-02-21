@@ -9,9 +9,10 @@ const Hero = (props) => {
     return (
         <section className="hero">
             <nav>
-                <h2 component={Link} to={'/'}>
+                <Link to="/"><h2 component={Link} to={'/'}>
                     BurnMyMoney.Online
-                </h2>
+                </h2></Link>
+                <Link to="/Profile"><h2>Profile</h2></Link>
                 <button onClick={handleLogout}>Logout</button>
             </nav>
             <Switch>
