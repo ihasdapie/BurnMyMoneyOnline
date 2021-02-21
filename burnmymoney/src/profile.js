@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Chart from "chartjs";
 
-
+/*
 function get_Portfolio(key_id, secret_key, url) {
     // returns portfolio and shares
     var P_stockes = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"];
@@ -9,15 +9,15 @@ function get_Portfolio(key_id, secret_key, url) {
     var colors = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"];
     return P_stockes, P_shares, colors;
 }
-
-export default function profile() {
-    var P_stockes, P_shares, colors = get_Portfolio(key_id, secret_key, url);
+*/
+const Profile = () => {
+    //var P_stockes, P_shares, colors = get_Portfolio(key_id, secret_key, url);
     
     useEffect(() => {
     const ctx = document.getElementById("pie");
     new Chart(ctx, {
       type: "pie",
-      data: {
+      /*data: {
         labels: P_stockes,
         datasets: [
           {
@@ -28,13 +28,15 @@ export default function profile() {
             borderWidth: 1
           }
         ]
-      }
+      }*/
     });
   });
   return (
-    <div className="profile">
+    <div className="Profile">
       <h2>Profile</h2>
       <canvas id="pie" width="400" height="400" />
     </div>
   );
 }
+
+export default Profile;

@@ -1,6 +1,5 @@
 import React from 'react';
 import Profile from './Profile';
-import { Switch, Route } from 'react-router-dom';
 
 const Hero = (props) => {
 
@@ -15,11 +14,6 @@ const Hero = (props) => {
             <div>
                 <button id = "bigFuckingButton" onClick={handle_buy}>BUY</button>
             </div>
-            <Switch>
-                <Route path="/profile">
-                    <Profile />
-                </Route>
-            </Switch>
 
 
         </section>
