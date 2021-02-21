@@ -137,3 +137,27 @@ button:hover {
   background: #e46217;
 }
 
+#bigFuckingButton {
+  background: #ff4500;
+  display: flex;
+  font-size: 8em;
+  text-align: center;
+  padding: 0.25em;
+  margin: auto;
+  width: 50%;
+  border: 20px solid #23252C;
+  border-radius: 0.5em;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: url("img/cursor_rocket_small.png"), pointer;
+  transition-duration: 0.4s;
+
+}
+
+#bigFuckingButton:hover {
+  background: #ff8500;
+
+}
+
+
+
