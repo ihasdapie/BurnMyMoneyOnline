@@ -149,11 +149,11 @@ button:hover {
 .hero .bigFuckingButton {
   background: #cf6117;
   font-family: "Poppins";
-  font-size: 8em;
+  font-size: 6rem;
   margin: auto;
-  padding: 0.25em;
-  width: 50%;
-  border: 20px solid #23252C;
+  padding: 0.25rem;
+  width: 50vw;
+  border: none;
   text-decoration: none;
   overflow: hidden;
   cursor: url("img/cursor_rocket_small.png"), pointer;
@@ -165,5 +165,9 @@ button:hover {
 
 }
 
-
-
+.trail {
+  position: absolute;
+  height: 6px; width: 6px;
+  border-radius: 50%;
+  background: tomato;
+}
