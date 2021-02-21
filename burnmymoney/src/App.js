@@ -22,13 +22,15 @@ const App = () => {
   const SECRET_API_KEY = useState(null);
 
   const handle_buy = async () => {
-
     const alpaca = new Alpaca({  keyId: API_KEY,  secretKey: SECRET_API_KEY,  paper: true});
 
-    let tickerURL = await fetch("https://raw.githubusercontent.com/ihasdapie/BurnMyMoneyOnline/react/assets/tmp.json", {method: "GET"})
+    let tickerURL = await fetch("https://raw.githubusercontent.com/ihasdapie/BurnMyMoneyOnline/main/assets/tmp.json", {method: "GET"})
     tickerURL = await tickerURL.json();
     let stocks = tickerURL.fucked_stocks;
     let ticker = stocks[Math.floor(Math.random()*stocks.length)]
+
+    console.log(ticker);
+
     const order = await alpaca.createOrder({
       "symbol": ticker,
       "qty": 1,
@@ -36,8 +38,13 @@ const App = () => {
       "time_in_force": "day",
       "type": "market"
     })
-    console.log("handle buy exited");
 
+    console.log(order);
+
+
+
+
+    console.log("handle buy exited");
   }
 
 

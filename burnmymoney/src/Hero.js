@@ -2,6 +2,8 @@ import React from 'react';
 import Profile from './Profile';
 import {Route, Switch, Link} from 'react-router-dom';
 
+
+
 const Hero = (props) => {
 
     const { handleLogout, handle_buy, Link } = props;
@@ -35,3 +37,13 @@ g
 
 
 export default Hero;
+
+
+
+
+  /*  
+    <button className="bigFuckingButton" onClick={handle_buy}>Buy Stonks</button> */
+
+
+      
+
