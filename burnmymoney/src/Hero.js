@@ -15,6 +15,11 @@ const Hero = (props) => {
             <div>
                 <button id = "bigFuckingButton" onClick={handle_buy}>BUY</button>
             </div>
+            <Switch>
+                <Route path="/profile">
+                    <Profile />
+                </Route>
+            </Switch>
 
 
         </section>

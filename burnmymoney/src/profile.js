@@ -33,6 +33,7 @@ export default function profile() {
   });
   return (
     <div className="profile">
+      <h2>Profile</h2>
       <canvas id="pie" width="400" height="400" />
     </div>
   );
