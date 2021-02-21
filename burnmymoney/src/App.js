@@ -101,7 +101,7 @@ const App = () => {
         />
       ) : (
         <Login 
-          email={email + "@gmail.com"}
+          email={email}
           setEmail={setEmail}
           password={password}
           setPassword={setPassword}
