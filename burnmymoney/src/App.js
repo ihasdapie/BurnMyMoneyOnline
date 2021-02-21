@@ -13,7 +13,17 @@ const App = () => {
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [hasAccount, setHasAccount] = useState(false);
+  const api_key = useState(null);
+  const secret_api_key = useState(null);
 
+
+  const handle_buy = () => {
+    console.log("make a buy request");
+    alert("call handle_buy");
+
+  }
+
+  
   const clearInputs = () => {
     setEmail('');
     setPassword('');
@@ -83,7 +93,11 @@ const App = () => {
   return (
     <div className="App">
       {user ? (
-        <Hero handleLogout={handleLogout} />
+        <Hero
+          handleLogout={handleLogout} 
+          handle_buy={handle_buy}
+
+        />
       ) : (
         <Login 
           email={email}

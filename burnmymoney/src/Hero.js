@@ -2,7 +2,9 @@ import React from 'react';
 import Profile from './Profile';
 import { Switch, Route } from 'react-router-dom';
 
-const Hero = ({handleLogout}) => {
+const Hero = (props) => {
+
+    const { handleLogout, handle_buy } = props;
 
     return (
         <section className="hero">
@@ -10,13 +12,15 @@ const Hero = ({handleLogout}) => {
                 <h2>BurnMyMoney.Online</h2>
                 <button onClick={handleLogout}>Logout</button>
             </nav>
-            <Switch>
-                <Route path="/profile">
-                    <Profile />
-                </Route>
-            </Switch>
+            <div>
+                <button id = "bigFuckingButton" onClick={handle_buy}>BUY</button>
+            </div>
+
+
         </section>
     )
 }
+
+
 
 export default Hero;
