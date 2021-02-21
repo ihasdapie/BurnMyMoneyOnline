@@ -94,17 +94,10 @@ const App = () => {
   return (
     <div className="App">
       {user ? (
-        <Switch>
-          <Route path="/" exact>
-            <Hero
-            handleLogout={handleLogout} 
-            handle_buy={handle_buy}
-            />
-          </Route>
-          <Route path="/profile">
-              <Profile />
-          </Route>
-        </Switch>
+        <Hero
+        handleLogout={handleLogout} 
+        handle_buy={handle_buy}
+        />
       ) : (
         <Login 
           email={email}
