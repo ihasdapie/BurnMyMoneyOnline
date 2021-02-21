@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from './img/logo.png';
 
 const Login = (props) => {
     
@@ -7,7 +8,8 @@ const Login = (props) => {
     return(
         <section className="login">
             <div className="loginContainer">
-                <label>Username</label>
+                <img src={logo} alt="" />
+                <label>Email</label>
                 <input 
                     type="text" 
                     autoFocus 

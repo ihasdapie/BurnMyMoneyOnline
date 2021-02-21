@@ -26,13 +26,19 @@ button:hover {
   min-height: 100vh;
   padding: 0 20px;
   display: flex;
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/src/img/background.jpeg');
+  background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8) ), url('/src/img/background.jpeg');
   background-position:center top;
   
 }
 
+.login img {
+  width: 15rem;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
+
 .login .loginContainer {
-  padding: 60px;
+  padding: 40px;
   margin: auto;
   width: 100%;
   max-width: 520px;
@@ -44,7 +50,7 @@ button:hover {
     ellipse at left bottom,
     rgb(161, 121, 46) 0%,
     rgba(170, 91, 26, 0.9) 59%,
-    rgba(153, 28, 28, 0.9) 100%
+    rgba(153, 68, 28, 0.9) 100%
   );
   box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
 }
@@ -53,7 +59,7 @@ button:hover {
   color: white;
   margin: 14px 0;
   display: block;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1;
 }
 
@@ -61,7 +67,7 @@ button:hover {
   width: 100%;
   border: none;
   outline: none;
-  font-size: 19px;
+  font-size: 18px;
   padding: 10px;
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
