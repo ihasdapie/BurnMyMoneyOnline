@@ -112,6 +112,8 @@ button:hover {
     rgba(114, 68, 16, 0.9) 59%,
     rgba(102, 23, 13, 0.9) 100%
   );
+  display: flex;
+  flex-direction: column;
 }
 
 .hero nav {
@@ -137,24 +139,28 @@ button:hover {
   background: #e46217;
 }
 
-#bigFuckingButton {
-  background: #ff4500;
+.hero .main {
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 100vh;
+}
+
+.hero .bigFuckingButton {
+  background: #cf6117;
+  font-family: "Poppins";
   font-size: 8em;
-  text-align: center;
-  padding: 0.25em;
   margin: auto;
+  padding: 0.25em;
   width: 50%;
   border: 20px solid #23252C;
-  border-radius: 0.5em;
   text-decoration: none;
   overflow: hidden;
   cursor: url("img/cursor_rocket_small.png"), pointer;
   transition-duration: 0.4s;
-
 }
 
-#bigFuckingButton:hover {
+.hero .bigFuckingButton:hover {
   background: #ff8500;
 
 }
