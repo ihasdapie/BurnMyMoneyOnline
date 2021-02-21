@@ -45,7 +45,7 @@ export default class Profile extends React.Component {
           options={{
             title:{
               display:true,
-              text:'Average Rainfall per month',
+              text:'Your Stock Portfolio',
               fontSize:20
             },
             legend:{
