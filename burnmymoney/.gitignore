@@ -17,7 +17,6 @@
 .env.development.local
 .env.test.local
 .env.production.local
-burnmymoney-cc9f3-firebase-adminsdk-m1jb6-151030892b.json
 
 npm-debug.log*
 yarn-debug.log*
