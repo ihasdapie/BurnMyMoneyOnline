@@ -3,7 +3,7 @@ import fire from './fire';
 import Login from './Login';
 import Hero from './Hero';
 import Profile from './Profile';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 
 const App = () => {
@@ -97,6 +97,7 @@ const App = () => {
         <Hero
         handleLogout={handleLogout} 
         handle_buy={handle_buy}
+        Link={Link}
         />
       ) : (
         <Login 
