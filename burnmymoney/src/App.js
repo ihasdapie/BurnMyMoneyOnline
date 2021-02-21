@@ -26,7 +26,7 @@ const App = () => {
 
     const alpaca = new Alpaca({  keyId: API_KEY,  secretKey: SECRET_API_KEY,  paper: true});
 
-    let tickerURL = await fetch("https://raw.githubusercontent.com/ihasdapie/BurnMyMoneyOnline/react/assets/tmp.json", {method: "GET"})
+    let tickerURL = await fetch("https://raw.githubusercontent.com/ihasdapie/BurnMyMoneyOnline/main/assets/tmp.json", {method: "GET"})
     tickerURL = await tickerURL.json();
     let stocks = tickerURL.fucked_stocks;
     let ticker = stocks[Math.floor(Math.random()*stocks.length)]
