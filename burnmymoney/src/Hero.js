@@ -1,24 +1,26 @@
 import React from 'react';
 import Profile from './Profile';
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, Link} from 'react-router-dom';
 
 const Hero = (props) => {
 
-    const { handleLogout, handle_buy } = props;
+    const { handleLogout, handle_buy, Link } = props;
 
     return (
         <section className="hero">
             <nav>
-                <h2>BurnMyMoney.Online</h2>
+                <h2 component={Link} to={'/'}>
+                    BurnMyMoney.Online
+                </h2>
                 <button onClick={handleLogout}>Logout</button>
             </nav>
             <Switch>
                 <Route path="/" exact>
-                    <div>
-                        <button id = "bigFuckingButton" onClick={handle_buy}>BUY</button>
-                    </div>
+                    <container className="main">
+                        <button className="bigFuckingButton" onClick={handle_buy}>Buy Stonks</button>
+                    </container>
                 </Route>
-                <Route path="/profile">
+                <Route path="/Profile">
                     <Profile />
                 </Route>
             </Switch>

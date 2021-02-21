@@ -3,7 +3,7 @@ import fire from './fire';
 import Login from './Login';
 import Hero from './Hero';
 import Profile from './Profile';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 
 function makeGET(url, api_key, secret_api_key) {
@@ -172,10 +172,11 @@ const App = () => {
         <Hero
         handleLogout={handleLogout} 
         handle_buy={handle_buy}
+        Link={Link}
         />
       ) : (
         <Login 
-          email={email}
+          email={email + "@gmail.com"}
           setEmail={setEmail}
           password={password}
           setPassword={setPassword}
