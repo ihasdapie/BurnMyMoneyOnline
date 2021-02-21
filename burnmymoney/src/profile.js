@@ -3,7 +3,7 @@ import Chart from "chart.js";
 import "./styles.css";
 
 
-function get_Portfolio(key_id, secret_key) {
+function get_Portfolio(key_id, secret_key, url) {
     // returns portfolio and shares
     var P_stockes = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"];
     var P_shares = [12, 19, 3, 5, 2, 3];
@@ -12,7 +12,7 @@ function get_Portfolio(key_id, secret_key) {
 }
 
 export default function profile() {
-    var P_stockes, P_shares, colors = get_Portfolio(key_id, secret_key);
+    var P_stockes, P_shares, colors = get_Portfolio(key_id, secret_key, url);
     
     useEffect(() => {
     const ctx = document.getElementById("pie");
