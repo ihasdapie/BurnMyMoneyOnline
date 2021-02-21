@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Chart from "chart.js";
 import "./styles.css";
 
-export default function App() {
+export default function profile() {
   useEffect(() => {
     const ctx = document.getElementById("myChart");
     new Chart(ctx, {
@@ -29,7 +29,7 @@ export default function App() {
     });
   });
   return (
-    <div className="App">
+    <div className="profile">
       <canvas id="myChart" width="400" height="400" />
     </div>
   );
