@@ -1,52 +1,47 @@
 import React from 'react';
 import {Pie, Doughnut} from 'react-chartjs-2';
 
-const state = {
-  labels: ['January', 'February', 'March',
-           'April', 'May'],
-  datasets: [
-    {
-      label: 'Rainfall',
-      backgroundColor: [
-        '#B21F00',
-        '#C9DE00',
-        '#2FDE00',
-        '#00A6B4',
-        '#6800B4'
-      ],
-      hoverBackgroundColor: [
-      '#501800',
-      '#4B5000',
-      '#175000',
-      '#003350',
-      '#35014F'
-      ],
-      data: [65, 59, 80, 81, 56]
-    }
-  ]
+function get_Portfolio(key_id, secret_key, url) {
+    // returns portfolio and shares
+    var P_stockes = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"];
+    var P_shares = [12, 19, 3, 5, 2, 3];
+    var colors = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"];
+    var colors_hover = ["LightRed", "LightBlue", "LightYellow", "LightGreen", "LightPurple", "LightOrange"];
+    
+    var state = {
+        labels: P_stockes,
+        datasets: [
+            {
+            label: P_stockes,
+            backgroundColor: colors,
+            hoverBackgroundColor: colors_hover,
+            data: P_shares
+            }
+        ]
+        };
+    return state
 }
 
+
+
 export default class Profile extends React.Component {
-  render() {
+    constructor(props) {
+        super(props)
+        this.key_id = 1;
+        this.secret_key = 2;
+        this.url = 3;
+        this.state = get_Portfolio(this.key_id, this.secret_key, this.url);
+
+        
+      }
+    
+    
+    render() {
     return (
       <div>
-        <Pie
-          data={state}
-          options={{
-            title:{
-              display:true,
-              text:'Average Rainfall per month',
-              fontSize:20
-            },
-            legend:{
-              display:true,
-              position:'right'
-            }
-          }}
-        />
 
         <Doughnut
-          data={state}
+          data={this.state}
           options={{
             title:{
               display:true,
