@@ -47,9 +47,15 @@ const App = () => {
 
 
 
-  const handleKeyPress = e => {
+  const handleKeyPressLogin = e => {
     if (e.key === 'Enter') {
       handleLogin();
+    }
+  }
+
+  const handleKeyPressSignup = e => {
+    if (e.key === 'Enter') {
+      handleSignup();
     }
   }
  
@@ -140,7 +146,8 @@ const App = () => {
           setHasAccount={setHasAccount}
           emailError={emailError}
           passwordError={passwordError}
-          handleKeyPress={handleKeyPress}
+          handleKeyPressLogin={handleKeyPressLogin}
+          handleKeyPressSignup={handleKeyPressSignup}
         />
       )}
     </div>

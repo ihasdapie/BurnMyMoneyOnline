@@ -14,7 +14,8 @@ const Login = (props) => {
         setHasAccount, 
         emailError, 
         passwordError,
-        handleKeyPress
+        handleKeyPressLogin,
+        handleKeyPressSignup
     } = props;
 
     return(
@@ -31,27 +32,37 @@ const Login = (props) => {
                 />
                 <p className="errorMsg">{emailError}</p>
                 <label>Password</label>
-                <input 
-                    type="password"
-                    required
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    onKeyPress={handleKeyPress}
-                />
-                <p className="errorMsg">{passwordError}</p>
-                <div className="btnContainer">
-                    {hasAccount ? (
-                        <>
+                {hasAccount ? (
+                    <>
+                        <input 
+                            type="password"
+                            required
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            onKeyPress={handleKeyPressLogin}
+                        />
+                        <p className="errorMsg">{passwordError}</p>
+                        <div className="btnContainer">
                             <button onClick={handleLogin}>Sign in</button>
                             <p>Don't have an account? <span onClick={() => setHasAccount(!hasAccount)}>Sign up</span></p>
-                        </>
-                    ) : (
-                        <>
+                        </div>
+                    </>
+                ) : (
+                    <>
+                        <input 
+                            type="password"
+                            required
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            onKeyPress={handleKeyPressSignup}
+                        />
+                        <p className="errorMsg">{passwordError}</p>
+                        <div className="btnContainer">
                             <button onClick={handleSignup}>Sign up</button>
                             <p>Have an account? <span onClick={() => setHasAccount(!hasAccount)}>Sign in</span></p>
-                        </>
-                    )}
-                </div>
+                        </div>
+                    </>
+                )}
             </div>
         </section>
     )
