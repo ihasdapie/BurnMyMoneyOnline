@@ -7,7 +7,6 @@ import {Route, Switch, Link} from 'react-router-dom';
 const Hero = (props) => {
 
     const { handleLogout, handle_buy, Link } = props;
-g
     return (
         <section className="hero">
             <nav>

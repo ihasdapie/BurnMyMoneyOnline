@@ -153,7 +153,8 @@ button:hover {
   margin: auto;
   padding: 0.25rem;
   width: 50vw;
-  border: none;
+  border: 20px red solid;
+  border-radius: 2em;
   text-decoration: none;
   overflow: hidden;
   cursor: url("img/cursor_rocket_small.png"), pointer;
@@ -161,7 +162,9 @@ button:hover {
 }
 
 .hero .bigFuckingButton:hover {
-  background: #ff8500;
+  background: #777777;
+
+  border: blue 10px solid;
 
 }
 

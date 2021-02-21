@@ -39,6 +39,10 @@ const App = () => {
       "type": "market"
     })
 
+    alert("You just bought 1 share of " + ticker);
+
+
+
     console.log(order);
 
 
