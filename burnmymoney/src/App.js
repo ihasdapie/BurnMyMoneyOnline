@@ -21,7 +21,6 @@ const App = () => {
   const API_KEY = useState(null);
   const SECRET_API_KEY = useState(null);
 
-
   const handle_buy = async () => {
 
     const alpaca = new Alpaca({  keyId: API_KEY,  secretKey: SECRET_API_KEY,  paper: true});
